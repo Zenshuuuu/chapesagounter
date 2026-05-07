@@ -1133,3 +1133,56 @@ footer {
   50%       { transform: translateX(-50%) translateY(-6px); }
 }
 .pulse-red { animation: none; }
+
+/* ================================================================
+   RESPONSIVE GRIDS
+================================================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2rem;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .stats-grid { grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
+}
+
+.pourquoi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 960px) {
+  .pourquoi-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.reass-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+@media (max-width: 480px) {
+  .reass-grid { grid-template-columns: 1fr; }
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 600px) {
+  .form-row-2 { grid-template-columns: 1fr; }
+}
+
+/* Hero mobile */
+@media (max-width: 900px) {
+  .hero-left { padding: 1rem 0 3rem; }
+  .hero-watermark { font-size: clamp(28px, 8vw, 50px); top: 5%; }
+}
+
+/* Floating badge overflow on small screens */
+@media (max-width: 540px) {
+  .pourquoi-badge { bottom: .5rem !important; right: .5rem !important; }
+}
