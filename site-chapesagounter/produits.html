@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ================================================================
+       META & SEO – Page Produits
+  ================================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Produits & Expertises – Chapes Agounter | Chape Béton, Fluide, Anhydrite, Plancher Chauffant</title>
+  <meta name="description" content="Découvrez toutes les prestations de Chapes Agounter : chape béton, ravoirage, chape liquide, plancher chauffant, ciment, sol rafraîchissant, anhydrite, chape fluide. Expert Alsace." />
+  <meta name="keywords" content="chape béton Alsace, ravoirage, chape liquide, plancher chauffant Mulhouse, sol rafraîchissant, chape anhydrite, chape fluide Strasbourg, ciment chapiste" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.chapes-agounter.fr/produits.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand:      { DEFAULT: '#DC2626', dark: '#B91C1C', light: '#EF4444' },
+            anthracite: { DEFAULT: '#0f1117', l: '#161b27', m: '#1e2535' },
+            concrete:   { DEFAULT: '#6B7280', l: '#9CA3AF' }
+          },
+          fontFamily: {
+            display: ['Montserrat', 'sans-serif'],
+            body:    ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================================================================
+       NAVIGATION (identique sur toutes les pages)
+  ================================================================ -->
+  <header id="navbar">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+        <img src="assets/img/chapesagounter.png" alt="Logo Chapes Agounter" class="nav-logo" />
+      </a>
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html"    class="nav-link">Accueil</a></li>
+        <li><a href="produits.html" class="nav-link">Produits</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:+33676466747" class="btn-outline text-sm py-2 px-4">
+          <i data-lucide="phone" style="width:15px;height:15px;"></i>
+          06 76 46 67 47
+        </a>
+        <a href="contact.html" class="btn-primary text-sm py-2 px-4">
+          <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+          Devis gratuit
+        </a>
+      </div>
+      <button id="menu-btn" aria-label="Menu" class="md:hidden text-gray-400 hover:text-white transition-colors p-1">
+        <i data-lucide="menu"  id="icon-open"  style="width:26px;height:26px;"></i>
+        <i data-lucide="x"    id="icon-close" style="width:26px;height:26px;" class="hidden"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-anthracite-DEFAULT/95 border-t border-white/8 px-5 pb-6 pt-4 space-y-1">
+      <a href="index.html"    class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Accueil</a>
+      <a href="produits.html" class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Produits & Expertises</a>
+      <a href="contact.html"  class="block py-3 text-gray-300 hover:text-white text-sm font-medium" onclick="closeMobileMenu()">Contact & Devis</a>
+      <div class="flex flex-col gap-3 pt-4">
+        <a href="tel:+33676466747" class="btn-outline text-sm justify-center">
+          <i data-lucide="phone" style="width:15px;height:15px;"></i> 06 76 46 67 47
+        </a>
+        <a href="contact.html" class="btn-primary text-sm justify-center" onclick="closeMobileMenu()">
+          <i data-lucide="file-text" style="width:15px;height:15px;"></i> Devis gratuit
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================================================================
+       HERO SUB-PAGE
+  ================================================================ -->
+  <div class="hero-sub">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="position:relative;z-index:10;">
+      <div class="red-rule"></div>
+      <span class="section-label">Nos 8 spécialités</span>
+      <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,3.75rem);margin-bottom:1rem;">
+        Produits & Expertises
+      </h1>
+      <p style="color:#9ca3af;font-size:1.05rem;line-height:1.75;max-width:560px;">
+        Du ravoirage à la chape anhydrite haute performance, chaque technique est maîtrisée
+        et exécutée avec précision laser. Découvrez l'étendue de notre savoir-faire.
+      </p>
+      <!-- Breadcrumb -->
+      <nav style="margin-top:1.5rem;display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:#6b7280;">
+        <a href="index.html" style="color:#9ca3af;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#DC2626'" onmouseout="this.style.color='#9ca3af'">Accueil</a>
+        <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+        <span style="color:#DC2626;">Produits & Expertises</span>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       PRODUITS — 8 BLOCS
+  ================================================================ -->
+  <main style="padding:5rem 0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+         style="display:flex;flex-direction:column;gap:2rem;">
+
+
+      <!-- ---- 1. CHAPE BÉTON ---- -->
+      <article id="chape-beton" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="overflow:hidden;max-height:320px;" class="md:col-span-2 md:max-h-none">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
+                 alt="Chape béton Illzach Mulhouse Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+          <div style="padding:2.5rem;" class="md:col-span-3">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="layers" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Chape Béton</h2>
+              <span class="tag">Résidentiel & Industriel</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              La chape béton est la solution de référence pour les sols qui doivent supporter des charges
+              importantes. Coulée sur site, cette dalle en béton offre une résistance maximale tout en
+              garantissant une surface lisse, prête à recevoir tout revêtement : carrelage, parquet, résine.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Résistance mécanique supérieure</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Compatible tous revêtements</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Maisons, entrepôts, commerces</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Garantie décennale incluse</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ---- 2. RAVOIRAGE ---- -->
+      <article id="ravoirage" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="padding:2.5rem;order:1;" class="md:col-span-3 md:order-1">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="align-center" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Ravoirage</h2>
+              <span class="tag">Nivellement & Préparation</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              Le ravoirage est une couche de forme légère posée sur un support existant pour régulariser
+              les défauts de planéité avant la pose du revêtement final. Essentiel en rénovation, il
+              compense les irrégularités et prépare un support parfaitement plan, limitant les épaisseurs
+              et donc le poids sur la structure.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Correction de planéité</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Légèreté sur le plancher</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Idéal en rénovation</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Support universel pour revêtements</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+          <div style="overflow:hidden;max-height:320px;order:0;" class="md:col-span-2 md:max-h-none md:order-2">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=700&q=75"
+                 alt="Ravoirage nivellement sol Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ---- 3. CHAPE LIQUIDE ---- -->
+      <article id="chape-liquide" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="overflow:hidden;max-height:320px;" class="md:col-span-2 md:max-h-none">
+            <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=700&q=75"
+                 alt="Chape liquide autonivelante Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+          <div style="padding:2.5rem;" class="md:col-span-3">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="droplets" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Chape Liquide</h2>
+              <span class="tag">Haute Performance</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              La chape liquide (ou autonivelante) se répand naturellement sur la surface pour créer un
+              plan parfaitement horizontal sans effort de talochage. Mise en œuvre par pompage, elle est
+              idéale pour les grandes surfaces et s'adapte parfaitement aux circuits de plancher chauffant.
+              Sa consistance fluide lui permet de pénétrer dans les recoins et d'enrober totalement les tuyaux.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Planéité autonivelante</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Mise en œuvre rapide</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Grandes surfaces en une journée</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Enrobage parfait des réseaux</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ---- 4. PLANCHER CHAUFFANT ---- -->
+      <article id="plancher-chauffant" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="padding:2.5rem;order:1;" class="md:col-span-3 md:order-1">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="thermometer-sun" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Plancher Chauffant</h2>
+              <span class="tag">Confort & Économies</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              Le plancher chauffant hydraulique intègre un réseau de tuyaux dans la chape pour diffuser
+              une chaleur douce par rayonnement sur toute la surface du sol. Associé à une pompe à chaleur,
+              il réduit la consommation énergétique jusqu'à 30 % par rapport à un chauffage traditionnel.
+              Conforme à la réglementation RE2020.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Chaleur douce par rayonnement</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Économie d'énergie jusqu'à 30%</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Conforme RE2020</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Neuf et rénovation</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+          <div style="overflow:hidden;max-height:320px;order:0;" class="md:col-span-2 md:max-h-none md:order-2">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=75"
+                 alt="Plancher chauffant hydraulique chape Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ---- 5. CHAPE CIMENT ---- -->
+      <article id="chape-ciment" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="overflow:hidden;max-height:320px;" class="md:col-span-2 md:max-h-none">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=700&q=75"
+                 alt="Chape ciment mortier Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+          <div style="padding:2.5rem;" class="md:col-span-3">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="building-2" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Chape Ciment</h2>
+              <span class="tag">Polyvalence</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              La chape au mortier de ciment, dite "semi-sèche", est la technique la plus polyvalente.
+              Elle s'adapte à tous les types de supports et de chantiers : maison individuelle, logements
+              collectifs, locaux commerciaux. Sa mise en œuvre éprouvée permet un contrôle précis
+              de l'épaisseur et offre un excellent rapport qualité/prix.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Technique éprouvée</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Tous supports & contextes</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Excellent rapport qualité/prix</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Neuf & rénovation</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ---- 6. SOL RAFRAÎCHISSANT ---- -->
+      <article id="sol-rafraichissant" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="padding:2.5rem;order:1;" class="md:col-span-3 md:order-1">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="snowflake" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Sol Rafraîchissant</h2>
+              <span class="tag">Réversible · 12 mois/an</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              Le sol rafraîchissant est un système réversible utilisant les mêmes circuits hydrauliques
+              que le plancher chauffant. En été, de l'eau fraîche circule dans les tuyaux, absorbant
+              la chaleur ambiante et créant une sensation de fraîcheur douce. Ce système garantit
+              un confort thermique optimal 12 mois sur 12, sans courant d'air ni bruit.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Fraîcheur en été, chaleur en hiver</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Sans courant d'air ni bruit</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Économique & écologique</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Compatible pompe à chaleur</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+          <div style="overflow:hidden;max-height:320px;order:0;" class="md:col-span-2 md:max-h-none md:order-2">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&q=75"
+                 alt="Sol rafraîchissant système réversible Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ---- 7. CHAPE ANHYDRITE ---- -->
+      <article id="chape-anhydrite" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="overflow:hidden;max-height:320px;" class="md:col-span-2 md:max-h-none">
+            <img src="https://images.unsplash.com/photo-1597047084897-51e81819a499?auto=format&fit=crop&w=700&q=75"
+                 alt="Chape anhydrite sulfate calcium Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+          <div style="padding:2.5rem;" class="md:col-span-3">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="flask-conical" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Chape Anhydrite</h2>
+              <span class="tag">Séchage Rapide</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              À base de sulfate de calcium (anhydrite), cette chape fluide autonivelante combine les
+              avantages de la rapidité de mise en œuvre et d'un séchage plus rapide que le ciment.
+              Son faible retrait au séchage réduit les risques de fissuration et la rend particulièrement
+              adaptée aux planchers chauffants hydrauliques où un enrobage parfait est essentiel.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Faible retrait au séchage</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Anti-fissuration naturel</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Idéale pour plancher chauffant</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Grandes surfaces en continu</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ---- 8. CHAPE FLUIDE ---- -->
+      <article id="chape-fluide" class="product-block" data-aos="fade-up">
+        <div style="display:grid;grid-template-columns:1fr;gap:0;" class="md:grid-cols-5">
+          <div style="padding:2.5rem;order:1;" class="md:col-span-3 md:order-1">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+              <div class="product-icon-wrap">
+                <i data-lucide="waves" style="width:24px;height:24px;color:#DC2626;"></i>
+              </div>
+              <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;font-size:1.6rem;">Chape Fluide</h2>
+              <span class="tag">Technologie avancée</span>
+            </div>
+            <p style="color:#9ca3af;line-height:1.8;margin-bottom:1.5rem;">
+              La chape fluide représente le nec plus ultra de la chape autonivelante. Mise en œuvre
+              par pompage depuis l'extérieur du chantier, elle se répand uniformément sur la surface
+              et crée un plan parfait sans intervention manuelle. Particulièrement adaptée aux grandes
+              surfaces — halls, plateaux bureaux, EHPAD — elle réduit considérablement le temps de
+              chantier tout en garantissant une qualité irréprochable.
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem;">
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Pompage depuis l'extérieur</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Planéité ±2 mm sur 2 m</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Très grandes surfaces</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:.6rem;">
+                <i data-lucide="check-circle-2" style="width:16px;height:16px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+                <span style="color:#d1d5db;font-size:.875rem;">Chantier propre & rapide</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-primary" style="font-size:.875rem;padding:.7rem 1.5rem;">
+              <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+              Demander un devis
+            </a>
+          </div>
+          <div style="overflow:hidden;max-height:320px;order:0;" class="md:col-span-2 md:max-h-none md:order-2">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
+                 alt="Chape fluide autonivelante grande surface Alsace"
+                 style="width:100%;height:100%;object-fit:cover;transition:transform .5s;"
+                 onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+        </div>
+      </article>
+
+
+    </div>
+  </main>
+
+
+  <!-- ================================================================
+       CTA BAND
+  ================================================================ -->
+  <div class="section-divider"></div>
+  <section style="padding:5rem 0;background:#161b27;">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" style="text-align:center;" data-aos="fade-up">
+      <span class="section-label">Votre projet</span>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,2.75rem);margin-bottom:1rem;">
+        Quelle chape est faite pour vous ?
+      </h2>
+      <p style="color:#9ca3af;line-height:1.75;max-width:480px;margin:0 auto 2.5rem;">
+        Chaque chantier est unique. Appelez-nous ou remplissez le formulaire —
+        nous vous conseillons la solution la plus adaptée, gratuitement.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="contact.html" class="btn-primary">
+          <i data-lucide="send" style="width:18px;height:18px;"></i>
+          Obtenir mon devis gratuit
+        </a>
+        <a href="tel:+33676466747" class="btn-outline pulse-red">
+          <i data-lucide="phone" style="width:18px;height:18px;"></i>
+          06 76 46 67 47
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer style="padding:4rem 0 2rem;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:3rem;margin-bottom:3rem;">
+        <div>
+          <img src="assets/img/chapesagounter.png" alt="Logo Chapes Agounter" style="height:48px;width:auto;object-fit:contain;margin-bottom:1.1rem;" />
+          <p style="color:#6b7280;font-size:.875rem;line-height:1.75;max-width:240px;">Artisan chapiste à Illzach, au service de l'Alsace depuis plus de 15 ans.</p>
+        </div>
+        <div>
+          <h4 style="color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;">Navigation</h4>
+          <ul style="display:flex;flex-direction:column;gap:.75rem;">
+            <li><a href="index.html"    class="footer-link">Accueil</a></li>
+            <li><a href="produits.html" class="footer-link">Produits & Expertises</a></li>
+            <li><a href="contact.html"  class="footer-link">Contact & Devis</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;">Contact</h4>
+          <ul style="display:flex;flex-direction:column;gap:.9rem;">
+            <li style="display:flex;align-items:center;gap:.6rem;">
+              <i data-lucide="phone" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;"></i>
+              <a href="tel:+33676466747" class="footer-link">06 76 46 67 47</a>
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;">
+              <i data-lucide="phone" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;"></i>
+              <a href="tel:+33642421727" class="footer-link">06 42 42 17 27</a>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:.6rem;">
+              <i data-lucide="map-pin" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+              <span style="color:#6b7280;font-size:.875rem;">25 rue du Stade, 68110 Illzach</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;">
+        <p style="color:#4b5563;font-size:.8rem;">© 2025 Chapes Agounter – Tous droits réservés</p>
+        <p style="color:#4b5563;font-size:.8rem;">Artisan chapiste – Illzach (68110) – Garantie décennale</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Mobile CTA fixe -->
+  <div id="mobile-cta">
+    <a href="tel:+33676466747" class="btn-primary" style="flex:1;justify-content:center;font-size:.85rem;padding:.75rem;">
+      <i data-lucide="phone" style="width:16px;height:16px;"></i>
+      Appeler
+    </a>
+    <a href="contact.html" class="btn-outline" style="flex:1;justify-content:center;font-size:.85rem;padding:.75rem;">
+      <i data-lucide="file-text" style="width:16px;height:16px;"></i>
+      Devis gratuit
+    </a>
+  </div>
+
+  <button id="scroll-top" class="hidden-btn" aria-label="Retour en haut">
+    <i data-lucide="chevron-up" style="width:20px;height:20px;"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

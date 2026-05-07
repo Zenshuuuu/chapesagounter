@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ================================================================
+       META & SEO – Page d'accueil
+  ================================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapes Agounter – Chapiste Expert en Alsace | Illzach, Mulhouse, Strasbourg</title>
+  <meta name="description" content="Chapes Agounter, chapiste expert à Illzach (68). Chape béton, fluide, anhydrite, plancher chauffant, ravoirage. Devis gratuit sous 48h. Garantie décennale. Bas-Rhin & Haut-Rhin." />
+  <meta name="keywords" content="chapiste Alsace, chape fluide, chape béton, plancher chauffant, ravoirage, Illzach, Mulhouse, Strasbourg, isolation thermique, chape anhydrite" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.chapes-agounter.fr/" />
+  <meta property="og:title" content="Chapes Agounter – Chapiste Expert en Alsace" />
+  <meta property="og:description" content="Chape béton, fluide, anhydrite, plancher chauffant. Devis gratuit, garantie décennale." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="assets/img/chapesagounter.png" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Chapes Agounter",
+    "description": "Chapiste expert en Alsace – chape béton, fluide, anhydrite, plancher chauffant, ravoirage.",
+    "address": { "@type": "PostalAddress", "streetAddress": "25 rue du Stade", "postalCode": "68110", "addressLocality": "Illzach", "addressCountry": "FR" },
+    "telephone": ["+33676466747", "+33642421727"],
+    "areaServed": ["Bas-Rhin", "Haut-Rhin"],
+    "priceRange": "€€",
+    "openingHours": "Mo-Fr 07:00-18:00"
+  }
+  </script>
+
+  <!-- ================================================================
+       FONTS & LIBS
+  ================================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand:      { DEFAULT: '#DC2626', dark: '#B91C1C', light: '#EF4444' },
+            anthracite: { DEFAULT: '#0f1117', l: '#161b27', m: '#1e2535' },
+            concrete:   { DEFAULT: '#6B7280', l: '#9CA3AF' }
+          },
+          fontFamily: {
+            display: ['Montserrat', 'sans-serif'],
+            body:    ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================================================================
+       NAVIGATION
+  ================================================================ -->
+  <header id="navbar">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+        <img src="assets/img/chapesagounter.png" alt="Logo Chapes Agounter" class="nav-logo" />
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html"    class="nav-link">Accueil</a></li>
+        <li><a href="produits.html" class="nav-link">Produits</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA desktop -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:+33676466747" class="btn-outline text-sm py-2 px-4">
+          <i data-lucide="phone" style="width:15px;height:15px;"></i>
+          06 76 46 67 47
+        </a>
+        <a href="contact.html" class="btn-primary text-sm py-2 px-4">
+          <i data-lucide="file-text" style="width:15px;height:15px;"></i>
+          Devis gratuit
+        </a>
+      </div>
+
+      <!-- Burger -->
+      <button id="menu-btn" aria-label="Menu" class="md:hidden text-gray-400 hover:text-white transition-colors p-1">
+        <i data-lucide="menu"  id="icon-open"  style="width:26px;height:26px;"></i>
+        <i data-lucide="x"    id="icon-close" style="width:26px;height:26px;" class="hidden"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-anthracite-DEFAULT/95 border-t border-white/8 px-5 pb-6 pt-4 space-y-1">
+      <a href="index.html"    class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Accueil</a>
+      <a href="produits.html" class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Produits & Expertises</a>
+      <a href="contact.html"  class="block py-3 text-gray-300 hover:text-white text-sm font-medium" onclick="closeMobileMenu()">Contact & Devis</a>
+      <div class="flex flex-col gap-3 pt-4">
+        <a href="tel:+33676466747" class="btn-outline text-sm justify-center">
+          <i data-lucide="phone" style="width:15px;height:15px;"></i> 06 76 46 67 47
+        </a>
+        <a href="contact.html" class="btn-primary text-sm justify-center" onclick="closeMobileMenu()">
+          <i data-lucide="file-text" style="width:15px;height:15px;"></i> Devis gratuit
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================================================================
+       HERO
+  ================================================================ -->
+  <section class="hero">
+    <!-- Background -->
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1597047084897-51e81819a499?auto=format&fit=crop&w=1920&q=80"
+           alt="Chape béton lissé haute qualité Alsace"
+           style="width:100%;height:100%;object-fit:cover;" loading="eager" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-line"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-28 md:py-0">
+      <div style="max-width:780px;">
+
+        <!-- Badge -->
+        <div class="hero-badge" data-aos="fade-right" data-aos-duration="700">
+          <i data-lucide="map-pin" style="width:12px;height:12px;"></i>
+          Artisan Chapiste — Illzach · Alsace
+        </div>
+
+        <!-- H1 -->
+        <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"
+            style="font-size:clamp(2.6rem,5.5vw,4.5rem);">
+          L'Excellence<br />
+          <span class="accent">sous vos pieds</span><br />
+          Chapiste Expert en Alsace
+        </h1>
+
+        <!-- Subtitle -->
+        <p data-aos="fade-up" data-aos-delay="220" data-aos-duration="800"
+           class="text-gray-300 mt-6 mb-10 leading-relaxed"
+           style="font-size:1.15rem;max-width:580px;">
+          Chape béton, fluide, anhydrite, plancher chauffant, ravoirage.
+          Un travail de <strong class="text-white">précision laser</strong> avec
+          <strong class="text-white">garantie décennale</strong>, livré dans les délais.
+        </p>
+
+        <!-- CTAs -->
+        <div data-aos="fade-up" data-aos-delay="340" data-aos-duration="800"
+             style="display:flex;flex-wrap:wrap;gap:1rem;">
+          <a href="contact.html" class="btn-primary">
+            <i data-lucide="file-text" style="width:18px;height:18px;"></i>
+            Demander un devis gratuit
+          </a>
+          <a href="produits.html" class="btn-outline">
+            <i data-lucide="grid-2x2" style="width:18px;height:18px;"></i>
+            Voir nos prestations
+          </a>
+        </div>
+
+        <!-- Trust signals -->
+        <div data-aos="fade-up" data-aos-delay="450" data-aos-duration="800"
+             style="display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:3rem;">
+          <span style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#9ca3af;">
+            <i data-lucide="shield-check" style="width:16px;height:16px;color:#DC2626;"></i>
+            Garantie Décennale
+          </span>
+          <span style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#9ca3af;">
+            <i data-lucide="crosshair" style="width:16px;height:16px;color:#DC2626;"></i>
+            Précision Laser
+          </span>
+          <span style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#9ca3af;">
+            <i data-lucide="clock" style="width:16px;height:16px;color:#DC2626;"></i>
+            Devis sous 48h
+          </span>
+          <span style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#9ca3af;">
+            <i data-lucide="map-pin" style="width:16px;height:16px;color:#DC2626;"></i>
+            Illzach · Bas-Rhin · Haut-Rhin
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.35rem;animation:bounce 2s infinite;"
+         class="hidden md:flex">
+      <span style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#6b7280;">Découvrir</span>
+      <i data-lucide="chevron-down" style="width:18px;height:18px;color:#DC2626;"></i>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       STATS BAND
+  ================================================================ -->
+  <div class="stats-band">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+         style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;text-align:center;"
+         class="md:grid-cols-4">
+
+      <div data-aos="zoom-in" data-aos-delay="0">
+        <p class="stat-number" data-target="15" data-suffix=" ans">0</p>
+        <p style="color:#9ca3af;font-size:.85rem;margin-top:.25rem;">d'expérience</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="100">
+        <p class="stat-number" data-target="500" data-prefix="+" data-suffix="">0</p>
+        <p style="color:#9ca3af;font-size:.85rem;margin-top:.25rem;">chantiers réalisés</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="200">
+        <p class="stat-number" data-target="100" data-suffix="%">0</p>
+        <p style="color:#9ca3af;font-size:.85rem;margin-top:.25rem;">clients satisfaits</p>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="300">
+        <p class="stat-number" data-target="48" data-suffix="h">0</p>
+        <p style="color:#9ca3af;font-size:.85rem;margin-top:.25rem;">délai de devis</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="section-divider"></div>
+
+
+  <!-- ================================================================
+       SERVICES OVERVIEW
+  ================================================================ -->
+  <section style="padding:6rem 0;" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="services">
+    <div class="max-w-7xl mx-auto">
+
+      <div style="text-align:center;margin-bottom:3.5rem;" data-aos="fade-up">
+        <span class="section-label">Nos expertises</span>
+        <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.25rem);">
+          Nos Prestations
+        </h2>
+        <p style="color:#9ca3af;max-width:500px;margin:.75rem auto 0;line-height:1.75;">
+          8 spécialités maîtrisées, une exigence commune : un sol impeccable du premier au dernier millimètre.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+
+        <!-- Card 1 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="height:200px;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
+                 alt="Chape béton Alsace" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="product-icon-wrap" style="margin-bottom:1.1rem;">
+              <i data-lucide="layers" style="width:22px;height:22px;color:#DC2626;"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:.6rem;">Chape Béton</h3>
+            <p style="color:#9ca3af;font-size:.875rem;line-height:1.7;margin-bottom:1.25rem;">
+              Dalle béton coulée sur site, robuste et polyvalente pour tous types de locaux, résidentiels ou industriels.
+            </p>
+            <a href="produits.html#chape-beton" style="display:inline-flex;align-items:center;gap:.4rem;color:#DC2626;font-size:.85rem;font-weight:600;text-decoration:none;transition:gap .2s;"
+               onmouseover="this.style.gap='.8rem'" onmouseout="this.style.gap='.4rem'">
+              En savoir plus <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div style="height:200px;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=700&q=75"
+                 alt="Chape fluide anhydrite Alsace" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="product-icon-wrap" style="margin-bottom:1.1rem;">
+              <i data-lucide="waves" style="width:22px;height:22px;color:#DC2626;"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:.6rem;">Chape Fluide & Anhydrite</h3>
+            <p style="color:#9ca3af;font-size:.875rem;line-height:1.7;margin-bottom:1.25rem;">
+              Autonivelante, mise en œuvre rapide par pompage. Planéité irréprochable, idéale pour planchers chauffants.
+            </p>
+            <a href="produits.html#chape-fluide" style="display:inline-flex;align-items:center;gap:.4rem;color:#DC2626;font-size:.85rem;font-weight:600;text-decoration:none;"
+               onmouseover="this.style.gap='.8rem'" onmouseout="this.style.gap='.4rem'">
+              En savoir plus <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div style="height:200px;overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=75"
+                 alt="Plancher chauffant isolation Alsace" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="product-icon-wrap" style="margin-bottom:1.1rem;">
+              <i data-lucide="thermometer-sun" style="width:22px;height:22px;color:#DC2626;"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:.6rem;">Plancher Chauffant</h3>
+            <p style="color:#9ca3af;font-size:.875rem;line-height:1.7;margin-bottom:1.25rem;">
+              Intégration du circuit hydraulique dans la chape pour un chauffage par rayonnement doux et économique.
+            </p>
+            <a href="produits.html#plancher-chauffant" style="display:inline-flex;align-items:center;gap:.4rem;color:#DC2626;font-size:.85rem;font-weight:600;text-decoration:none;"
+               onmouseover="this.style.gap='.8rem'" onmouseout="this.style.gap='.4rem'">
+              En savoir plus <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:3rem;" data-aos="fade-up">
+        <a href="produits.html" class="btn-outline">
+          <i data-lucide="grid-2x2" style="width:18px;height:18px;"></i>
+          Voir toutes nos prestations (8 spécialités)
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ================================================================
+       POURQUOI NOUS
+  ================================================================ -->
+  <section style="padding:6rem 0;background:#161b27;" id="pourquoi">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+         style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:center;"
+         class="lg:grid-cols-2">
+
+      <!-- Image -->
+      <div data-aos="fade-right" data-aos-duration="900" style="position:relative;">
+        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=80"
+             alt="Chapiste professionnel en Alsace travail précision"
+             style="width:100%;height:480px;object-fit:cover;border-radius:14px;" />
+        <!-- Floating badge -->
+        <div style="position:absolute;bottom:-1.25rem;right:-1.25rem;background:#DC2626;color:#fff;padding:1.25rem 1.75rem;border-radius:12px;box-shadow:0 8px 32px rgba(220,38,38,0.4);">
+          <p style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.25rem;line-height:1;">10</p>
+          <p style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-top:.25rem;">Ans de Garantie</p>
+        </div>
+        <!-- Red accent line -->
+        <div style="position:absolute;top:0;left:-1rem;width:4px;height:60%;background:linear-gradient(180deg,#DC2626,transparent);border-radius:2px;"></div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <div data-aos="fade-up">
+          <span class="section-label">Notre engagement</span>
+          <div class="red-rule" style="width:48px;height:4px;background:#DC2626;border-radius:2px;margin-bottom:1.25rem;"></div>
+          <h2 class="section-title" style="font-size:clamp(2rem,3.5vw,3rem);margin-bottom:1.25rem;">
+            Pourquoi choisir<br />Chapes Agounter ?
+          </h2>
+          <p style="color:#9ca3af;line-height:1.8;margin-bottom:2.5rem;">
+            Basés à Illzach, au cœur de l'Alsace, nous intervenons sur tout le Haut-Rhin et le Bas-Rhin
+            avec la même rigueur artisanale, que ce soit une villa privée, un bâtiment commercial ou un site industriel.
+          </p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;">
+
+          <div class="reass-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="product-icon-wrap" style="margin-bottom:1rem;">
+              <i data-lucide="shield-check" style="width:22px;height:22px;color:#DC2626;"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;margin-bottom:.5rem;">Garantie Décennale</h3>
+            <p style="color:#9ca3af;font-size:.85rem;line-height:1.65;">Couverture complète pendant 10 ans. Votre investissement est sécurisé.</p>
+          </div>
+
+          <div class="reass-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="product-icon-wrap" style="margin-bottom:1rem;">
+              <i data-lucide="crosshair" style="width:22px;height:22px;color:#DC2626;"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;margin-bottom:.5rem;">Précision Laser</h3>
+            <p style="color:#9ca3af;font-size:.85rem;line-height:1.65;">Nivelage au laser : planéité à ±2 mm sur 2 mètres, sans compromis.</p>
+          </div>
+
+          <div class="reass-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="product-icon-wrap" style="margin-bottom:1rem;">
+              <i data-lucide="zap" style="width:22px;height:22px;color:#DC2626;"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;margin-bottom:.5rem;">Réactivité Alsacienne</h3>
+            <p style="color:#9ca3af;font-size:.85rem;line-height:1.65;">Devis sous 48h, intervention rapide sur tout le 67 et le 68.</p>
+          </div>
+
+          <div class="reass-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="product-icon-wrap" style="margin-bottom:1rem;">
+              <i data-lucide="users" style="width:22px;height:22px;color:#DC2626;"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;margin-bottom:.5rem;">Équipe Expérimentée</h3>
+            <p style="color:#9ca3af;font-size:.85rem;line-height:1.65;">+15 ans d'expertise collective pour des finitions irréprochables.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ================================================================
+       TÉMOIGNAGES
+  ================================================================ -->
+  <section style="padding:6rem 0;">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div style="text-align:center;margin-bottom:3.5rem;" data-aos="fade-up">
+        <span class="section-label">Avis clients</span>
+        <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);">Ils nous font confiance</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="display:flex;gap:.25rem;margin-bottom:1rem;">
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+          </div>
+          <p style="color:#d1d5db;font-size:.875rem;line-height:1.75;font-style:italic;margin-bottom:1.5rem;">
+            "Travail impeccable sur notre construction neuve à Mulhouse. La chape anhydrite est parfaitement plane.
+            Équipe ponctuelle, propre et très professionnelle."
+          </p>
+          <div style="display:flex;align-items:center;gap:.75rem;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(220,38,38,0.15);display:flex;align-items:center;justify-content:center;color:#DC2626;font-weight:700;font-size:.9rem;font-family:'Montserrat',sans-serif;">M</div>
+            <div>
+              <p style="color:#fff;font-size:.875rem;font-weight:600;">Marc D.</p>
+              <p style="color:#6b7280;font-size:.75rem;">Particulier – Mulhouse</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="120">
+          <div style="display:flex;gap:.25rem;margin-bottom:1rem;">
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+          </div>
+          <p style="color:#d1d5db;font-size:.875rem;line-height:1.75;font-style:italic;margin-bottom:1.5rem;">
+            "Rénovation de notre entrepôt logistique à Illzach. Délai respecté, finition remarquable.
+            Je recommande Chapes Agounter sans hésiter."
+          </p>
+          <div style="display:flex;align-items:center;gap:.75rem;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(220,38,38,0.15);display:flex;align-items:center;justify-content:center;color:#DC2626;font-weight:700;font-size:.9rem;font-family:'Montserrat',sans-serif;">S</div>
+            <div>
+              <p style="color:#fff;font-size:.875rem;font-weight:600;">Sophie L.</p>
+              <p style="color:#6b7280;font-size:.75rem;">Gérante – Illzach</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="240">
+          <div style="display:flex;gap:.25rem;margin-bottom:1rem;">
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+            <i data-lucide="star" style="width:16px;height:16px;color:#DC2626;fill:#DC2626;"></i>
+          </div>
+          <p style="color:#d1d5db;font-size:.875rem;line-height:1.75;font-style:italic;margin-bottom:1.5rem;">
+            "Devis reçu en 24h, chantier propre. La chape avec plancher chauffant fonctionne parfaitement.
+            Équipe sérieuse, à l'écoute."
+          </p>
+          <div style="display:flex;align-items:center;gap:.75rem;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(220,38,38,0.15);display:flex;align-items:center;justify-content:center;color:#DC2626;font-weight:700;font-size:.9rem;font-family:'Montserrat',sans-serif;">T</div>
+            <div>
+              <p style="color:#fff;font-size:.875rem;font-weight:600;">Thomas B.</p>
+              <p style="color:#6b7280;font-size:.75rem;">Maître d'œuvre – Strasbourg</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ================================================================
+       CTA BAND
+  ================================================================ -->
+  <section style="padding:5rem 0;background:linear-gradient(135deg,#161b27 0%,#1e2535 100%);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" style="text-align:center;" data-aos="fade-up">
+      <span class="section-label">Prêt à démarrer ?</span>
+      <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,3rem);margin-bottom:1rem;">
+        Votre projet mérite le meilleur.
+      </h2>
+      <p style="color:#9ca3af;line-height:1.75;max-width:500px;margin:0 auto 2.5rem;">
+        Contactez-nous dès aujourd'hui. Réponse garantie sous 48h,
+        devis entièrement gratuit et sans engagement.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="contact.html" class="btn-primary">
+          <i data-lucide="send" style="width:18px;height:18px;"></i>
+          Obtenir mon devis gratuit
+        </a>
+        <a href="tel:+33676466747" class="btn-outline pulse-red">
+          <i data-lucide="phone" style="width:18px;height:18px;"></i>
+          06 76 46 67 47
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer style="padding:4rem 0 2rem;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:3rem;margin-bottom:3rem;">
+
+        <!-- Brand -->
+        <div>
+          <img src="assets/img/chapesagounter.png" alt="Logo Chapes Agounter" style="height:48px;width:auto;object-fit:contain;margin-bottom:1.1rem;" />
+          <p style="color:#6b7280;font-size:.875rem;line-height:1.75;max-width:240px;">
+            Artisan chapiste à Illzach, au service de l'Alsace depuis plus de 15 ans.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 style="color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;">Navigation</h4>
+          <ul style="display:flex;flex-direction:column;gap:.75rem;">
+            <li><a href="index.html"    class="footer-link">Accueil</a></li>
+            <li><a href="produits.html" class="footer-link">Produits & Expertises</a></li>
+            <li><a href="contact.html"  class="footer-link">Contact & Devis</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 style="color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;">Prestations</h4>
+          <ul style="display:flex;flex-direction:column;gap:.75rem;">
+            <li><a href="produits.html#chape-beton"        class="footer-link">Chape Béton</a></li>
+            <li><a href="produits.html#chape-fluide"       class="footer-link">Chape Fluide & Anhydrite</a></li>
+            <li><a href="produits.html#plancher-chauffant" class="footer-link">Plancher Chauffant</a></li>
+            <li><a href="produits.html#ravoirage"          class="footer-link">Ravoirage</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 style="color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;">Contact</h4>
+          <ul style="display:flex;flex-direction:column;gap:.9rem;">
+            <li style="display:flex;align-items:center;gap:.6rem;">
+              <i data-lucide="phone" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;"></i>
+              <a href="tel:+33676466747" class="footer-link">06 76 46 67 47</a>
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;">
+              <i data-lucide="phone" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;"></i>
+              <a href="tel:+33642421727" class="footer-link">06 42 42 17 27</a>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:.6rem;">
+              <i data-lucide="map-pin" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+              <span style="color:#6b7280;font-size:.875rem;">25 rue du Stade<br />68110 Illzach</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+        <p style="color:#4b5563;font-size:.8rem;">© 2025 Chapes Agounter – Tous droits réservés</p>
+        <p style="color:#4b5563;font-size:.8rem;">Artisan chapiste – Illzach (68110) – Garantie décennale</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================================================================
+       MOBILE CTA FIXE
+  ================================================================ -->
+  <div id="mobile-cta">
+    <a href="tel:+33676466747" class="btn-primary" style="flex:1;justify-content:center;font-size:.85rem;padding:.75rem;">
+      <i data-lucide="phone" style="width:16px;height:16px;"></i>
+      Appeler
+    </a>
+    <a href="contact.html" class="btn-outline" style="flex:1;justify-content:center;font-size:.85rem;padding:.75rem;">
+      <i data-lucide="file-text" style="width:16px;height:16px;"></i>
+      Devis gratuit
+    </a>
+  </div>
+
+  <!-- Scroll-to-top -->
+  <button id="scroll-top" class="hidden-btn" aria-label="Retour en haut">
+    <i data-lucide="chevron-up" style="width:20px;height:20px;"></i>
+  </button>
+
+
+  <!-- ================================================================
+       SCRIPTS
+  ================================================================ -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
