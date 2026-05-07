@@ -22,7 +22,7 @@
       theme: {
         extend: {
           colors: {
-            brand:      { DEFAULT: '#DC2626', dark: '#B91C1C', light: '#EF4444' },
+            brand:      { DEFAULT: '#9ca3af', dark: '#B91C1C', light: '#EF4444' },
             anthracite: { DEFAULT: '#0f1117', l: '#161b27', m: '#1e2535' },
             concrete:   { DEFAULT: '#6B7280', l: '#9CA3AF' }
           },
@@ -48,36 +48,30 @@
         <img src="assets/img/chapesagounter.png" alt="Logo Chapes Agounter" class="nav-logo" />
       </a>
       <ul class="hidden md:flex items-center gap-8">
-        <li><a href="index.html"    class="nav-link">Accueil</a></li>
-        <li><a href="produits.html" class="nav-link">Produits</a></li>
-        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+        <li><a href="index.html#services"      class="nav-link">Services</a></li>
+        <li><a href="produits.html#ravoirage"  class="nav-link">Le Ravoirage</a></li>
+        <li><a href="produits.html"            class="nav-link">Produits</a></li>
+        <li><a href="index.html#pourquoi"      class="nav-link">L'Alsace</a></li>
+        <li><a href="contact.html"             class="nav-link">Contact</a></li>
       </ul>
       <div class="hidden md:flex items-center gap-3">
-        <a href="tel:+33676466747" class="btn-outline text-sm py-2 px-4">
-          <i data-lucide="phone" style="width:15px;height:15px;"></i>
-          06 76 46 67 47
-        </a>
-        <a href="#formulaire" class="btn-primary text-sm py-2 px-4">
-          <i data-lucide="file-text" style="width:15px;height:15px;"></i>
-          Devis gratuit
-        </a>
+        <a href="#formulaire" class="btn-primary text-sm py-2 px-5">Demander un devis</a>
+        <a href="https://wa.me/33676466747" class="btn-whatsapp text-sm py-2 px-5" target="_blank" rel="noopener">WhatsApp Direct</a>
       </div>
       <button id="menu-btn" aria-label="Menu" class="md:hidden text-gray-400 hover:text-white transition-colors p-1">
-        <i data-lucide="menu"  id="icon-open"  style="width:26px;height:26px;"></i>
-        <i data-lucide="x"    id="icon-close" style="width:26px;height:26px;" class="hidden"></i>
+        <i data-lucide="menu" id="icon-open"  style="width:26px;height:26px;"></i>
+        <i data-lucide="x"   id="icon-close" style="width:26px;height:26px;" class="hidden"></i>
       </button>
     </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-anthracite-DEFAULT/95 border-t border-white/8 px-5 pb-6 pt-4 space-y-1">
-      <a href="index.html"    class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Accueil</a>
-      <a href="produits.html" class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Produits & Expertises</a>
-      <a href="contact.html"  class="block py-3 text-gray-300 hover:text-white text-sm font-medium" onclick="closeMobileMenu()">Contact & Devis</a>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/6 px-5 pb-6 pt-4 space-y-1" style="background:#0a0a0a;">
+      <a href="index.html#services"     class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Services</a>
+      <a href="produits.html#ravoirage" class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Le Ravoirage</a>
+      <a href="produits.html"           class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">Produits</a>
+      <a href="index.html#pourquoi"     class="block py-3 text-gray-300 hover:text-white border-b border-white/6 text-sm font-medium" onclick="closeMobileMenu()">L'Alsace</a>
+      <a href="contact.html"            class="block py-3 text-gray-300 hover:text-white text-sm font-medium" onclick="closeMobileMenu()">Contact</a>
       <div class="flex flex-col gap-3 pt-4">
-        <a href="tel:+33676466747" class="btn-outline text-sm justify-center">
-          <i data-lucide="phone" style="width:15px;height:15px;"></i> 06 76 46 67 47
-        </a>
-        <a href="#formulaire" class="btn-primary text-sm justify-center" onclick="closeMobileMenu()">
-          <i data-lucide="file-text" style="width:15px;height:15px;"></i> Devis gratuit
-        </a>
+        <a href="#formulaire" class="btn-primary text-sm justify-center" onclick="closeMobileMenu()">Demander un devis</a>
+        <a href="https://wa.me/33676466747" class="btn-whatsapp text-sm justify-center" target="_blank" rel="noopener">WhatsApp Direct</a>
       </div>
     </div>
   </header>
@@ -98,9 +92,9 @@
         Nos équipes interviennent sur tout le Haut-Rhin et le Bas-Rhin.
       </p>
       <nav style="margin-top:1.5rem;display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:#6b7280;">
-        <a href="index.html" style="color:#9ca3af;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#DC2626'" onmouseout="this.style.color='#9ca3af'">Accueil</a>
+        <a href="index.html" style="color:#9ca3af;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#9ca3af'" onmouseout="this.style.color='#9ca3af'">Accueil</a>
         <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
-        <span style="color:#DC2626;">Contact</span>
+        <span style="color:#9ca3af;">Contact</span>
       </nav>
     </div>
   </div>
@@ -131,7 +125,7 @@
           <!-- Téléphone 1 -->
           <a href="tel:+33676466747" class="contact-card" data-aos="fade-up" data-aos-delay="0">
             <div class="contact-card-icon">
-              <i data-lucide="phone" style="width:22px;height:22px;color:#DC2626;"></i>
+              <i data-lucide="phone" style="width:22px;height:22px;color:#9ca3af;"></i>
             </div>
             <div>
               <p style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b7280;margin-bottom:.25rem;">Téléphone 1</p>
@@ -143,7 +137,7 @@
           <!-- Téléphone 2 -->
           <a href="tel:+33642421727" class="contact-card" data-aos="fade-up" data-aos-delay="80">
             <div class="contact-card-icon">
-              <i data-lucide="phone" style="width:22px;height:22px;color:#DC2626;"></i>
+              <i data-lucide="phone" style="width:22px;height:22px;color:#9ca3af;"></i>
             </div>
             <div>
               <p style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b7280;margin-bottom:.25rem;">Téléphone 2</p>
@@ -155,7 +149,7 @@
           <!-- Adresse -->
           <div class="contact-card" data-aos="fade-up" data-aos-delay="160">
             <div class="contact-card-icon">
-              <i data-lucide="map-pin" style="width:22px;height:22px;color:#DC2626;"></i>
+              <i data-lucide="map-pin" style="width:22px;height:22px;color:#9ca3af;"></i>
             </div>
             <div>
               <p style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b7280;margin-bottom:.25rem;">Adresse</p>
@@ -167,7 +161,7 @@
           <!-- Zone d'intervention -->
           <div class="contact-card" data-aos="fade-up" data-aos-delay="240">
             <div class="contact-card-icon">
-              <i data-lucide="map" style="width:22px;height:22px;color:#DC2626;"></i>
+              <i data-lucide="map" style="width:22px;height:22px;color:#9ca3af;"></i>
             </div>
             <div>
               <p style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b7280;margin-bottom:.25rem;">Zone d'intervention</p>
@@ -179,7 +173,7 @@
           <!-- Horaires -->
           <div class="contact-card" data-aos="fade-up" data-aos-delay="320">
             <div class="contact-card-icon">
-              <i data-lucide="clock" style="width:22px;height:22px;color:#DC2626;"></i>
+              <i data-lucide="clock" style="width:22px;height:22px;color:#9ca3af;"></i>
             </div>
             <div>
               <p style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b7280;margin-bottom:.5rem;">Horaires</p>
@@ -216,7 +210,9 @@
             Tous les champs marqués * sont obligatoires. Réponse sous 48h garantie.
           </p>
 
-          <form id="contact-form" novalidate>
+          <form id="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden" style="display:none;"><input name="bot-field" /></p>
 
             <!-- Ligne 1 : Nom + Prénom -->
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;" class="sm:grid-cols-2 grid-cols-1">
@@ -281,15 +277,15 @@
               <label class="form-label" for="contexte">Contexte</label>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.625rem;">
                 <label style="display:flex;align-items:center;gap:.5rem;background:#1e2535;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:.6rem .9rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(220,38,38,0.4)'" onmouseout="if(!this.querySelector('input').checked) this.style.borderColor='rgba(255,255,255,0.08)'">
-                  <input type="radio" name="contexte" value="construction-neuve" style="accent-color:#DC2626;" />
+                  <input type="radio" name="contexte" value="construction-neuve" style="accent-color:#9ca3af;" />
                   <span style="color:#9ca3af;font-size:.82rem;font-weight:500;">Construction neuve</span>
                 </label>
                 <label style="display:flex;align-items:center;gap:.5rem;background:#1e2535;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:.6rem .9rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(220,38,38,0.4)'" onmouseout="if(!this.querySelector('input').checked) this.style.borderColor='rgba(255,255,255,0.08)'">
-                  <input type="radio" name="contexte" value="renovation" style="accent-color:#DC2626;" />
+                  <input type="radio" name="contexte" value="renovation" style="accent-color:#9ca3af;" />
                   <span style="color:#9ca3af;font-size:.82rem;font-weight:500;">Rénovation</span>
                 </label>
                 <label style="display:flex;align-items:center;gap:.5rem;background:#1e2535;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:.6rem .9rem;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(220,38,38,0.4)'" onmouseout="if(!this.querySelector('input').checked) this.style.borderColor='rgba(255,255,255,0.08)'">
-                  <input type="radio" name="contexte" value="professionnel" style="accent-color:#DC2626;" />
+                  <input type="radio" name="contexte" value="professionnel" style="accent-color:#9ca3af;" />
                   <span style="color:#9ca3af;font-size:.82rem;font-weight:500;">Local professionnel</span>
                 </label>
               </div>
@@ -305,7 +301,7 @@
             <!-- RGPD -->
             <label style="display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;margin-bottom:1.75rem;">
               <input type="checkbox" name="rgpd" id="rgpd" required
-                     style="margin-top:3px;width:16px;height:16px;accent-color:#DC2626;flex-shrink:0;" />
+                     style="margin-top:3px;width:16px;height:16px;accent-color:#9ca3af;flex-shrink:0;" />
               <span style="color:#6b7280;font-size:.8rem;line-height:1.6;">
                 J'accepte que mes données soient utilisées pour traiter ma demande de devis.
                 Aucune donnée ne sera transmise à des tiers. Conformément au RGPD, vous pouvez
@@ -345,7 +341,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
       <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
         <div class="contact-card-icon">
-          <i data-lucide="navigation" style="width:20px;height:20px;color:#DC2626;"></i>
+          <i data-lucide="navigation" style="width:20px;height:20px;color:#9ca3af;"></i>
         </div>
         <div>
           <p style="color:#fff;font-weight:600;">25 rue du Stade, 68110 Illzach</p>
@@ -387,7 +383,7 @@
         <details style="background:#1e2535;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.25rem 1.5rem;cursor:pointer;" data-aos="fade-up" data-aos-delay="0">
           <summary style="color:#fff;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
             Quel est le délai pour obtenir un devis ?
-            <i data-lucide="plus" style="width:18px;height:18px;color:#DC2626;flex-shrink:0;"></i>
+            <i data-lucide="plus" style="width:18px;height:18px;color:#9ca3af;flex-shrink:0;"></i>
           </summary>
           <p style="color:#9ca3af;font-size:.875rem;line-height:1.75;margin-top:.875rem;">
             Nous nous engageons à vous répondre sous 48h ouvrées après réception de votre demande.
@@ -398,7 +394,7 @@
         <details style="background:#1e2535;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.25rem 1.5rem;cursor:pointer;" data-aos="fade-up" data-aos-delay="60">
           <summary style="color:#fff;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
             Intervenez-vous sur toute l'Alsace ?
-            <i data-lucide="plus" style="width:18px;height:18px;color:#DC2626;flex-shrink:0;"></i>
+            <i data-lucide="plus" style="width:18px;height:18px;color:#9ca3af;flex-shrink:0;"></i>
           </summary>
           <p style="color:#9ca3af;font-size:.875rem;line-height:1.75;margin-top:.875rem;">
             Oui, nous intervenons sur tout le Haut-Rhin (68) et le Bas-Rhin (67) :
@@ -409,7 +405,7 @@
         <details style="background:#1e2535;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.25rem 1.5rem;cursor:pointer;" data-aos="fade-up" data-aos-delay="120">
           <summary style="color:#fff;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
             Quelle chape choisir pour un plancher chauffant ?
-            <i data-lucide="plus" style="width:18px;height:18px;color:#DC2626;flex-shrink:0;"></i>
+            <i data-lucide="plus" style="width:18px;height:18px;color:#9ca3af;flex-shrink:0;"></i>
           </summary>
           <p style="color:#9ca3af;font-size:.875rem;line-height:1.75;margin-top:.875rem;">
             La chape anhydrite ou la chape fluide sont idéales pour les planchers chauffants :
@@ -421,7 +417,7 @@
         <details style="background:#1e2535;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.25rem 1.5rem;cursor:pointer;" data-aos="fade-up" data-aos-delay="180">
           <summary style="color:#fff;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
             Proposez-vous une garantie décennale ?
-            <i data-lucide="plus" style="width:18px;height:18px;color:#DC2626;flex-shrink:0;"></i>
+            <i data-lucide="plus" style="width:18px;height:18px;color:#9ca3af;flex-shrink:0;"></i>
           </summary>
           <p style="color:#9ca3af;font-size:.875rem;line-height:1.75;margin-top:.875rem;">
             Oui, tous nos travaux sont couverts par notre assurance responsabilité civile professionnelle
@@ -432,7 +428,7 @@
         <details style="background:#1e2535;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.25rem 1.5rem;cursor:pointer;" data-aos="fade-up" data-aos-delay="240">
           <summary style="color:#fff;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;">
             Quel est le délai de séchage d'une chape ?
-            <i data-lucide="plus" style="width:18px;height:18px;color:#DC2626;flex-shrink:0;"></i>
+            <i data-lucide="plus" style="width:18px;height:18px;color:#9ca3af;flex-shrink:0;"></i>
           </summary>
           <p style="color:#9ca3af;font-size:.875rem;line-height:1.75;margin-top:.875rem;">
             Le délai varie selon le type : chape ciment ≈ 4 semaines, chape anhydrite/fluide ≈ 2 à 3 semaines.
@@ -469,15 +465,15 @@
           <h4 style="color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.25rem;">Contact direct</h4>
           <ul style="display:flex;flex-direction:column;gap:.9rem;">
             <li style="display:flex;align-items:center;gap:.6rem;">
-              <i data-lucide="phone" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;"></i>
+              <i data-lucide="phone" style="width:15px;height:15px;color:#9ca3af;flex-shrink:0;"></i>
               <a href="tel:+33676466747" class="footer-link">06 76 46 67 47</a>
             </li>
             <li style="display:flex;align-items:center;gap:.6rem;">
-              <i data-lucide="phone" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;"></i>
+              <i data-lucide="phone" style="width:15px;height:15px;color:#9ca3af;flex-shrink:0;"></i>
               <a href="tel:+33642421727" class="footer-link">06 42 42 17 27</a>
             </li>
             <li style="display:flex;align-items:flex-start;gap:.6rem;">
-              <i data-lucide="map-pin" style="width:15px;height:15px;color:#DC2626;flex-shrink:0;margin-top:2px;"></i>
+              <i data-lucide="map-pin" style="width:15px;height:15px;color:#9ca3af;flex-shrink:0;margin-top:2px;"></i>
               <span style="color:#6b7280;font-size:.875rem;">25 rue du Stade<br />68110 Illzach</span>
             </li>
           </ul>

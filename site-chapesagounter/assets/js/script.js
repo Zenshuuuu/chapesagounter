@@ -15,6 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Lucide icons ---- */
   lucide.createIcons();
 
+  /* ---- Page transitions (fade-out on internal link click) ---- */
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const isInternal = !href.startsWith('http') &&
+                       !href.startsWith('#') &&
+                       !href.startsWith('tel:') &&
+                       !href.startsWith('mailto:') &&
+                       !href.startsWith('//') &&
+                       !href.startsWith('javascript');
+    if (isInternal) {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
+        document.body.style.opacity = '0';
+        document.body.style.transform = 'translateY(-8px)';
+        setTimeout(() => { window.location.href = href; }, 290);
+      });
+    }
+  });
+
   /* ---- Navbar scroll ---- */
   const navbar = document.getElementById('navbar');
   if (navbar) {
@@ -69,12 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Animated counters ---- */
   function animateCounter(el) {
-    const target = parseInt(el.dataset.target, 10);
-    const suffix = el.dataset.suffix || '';
-    const prefix = el.dataset.prefix || '';
+    const target   = parseInt(el.dataset.target, 10);
+    const suffix   = el.dataset.suffix || '';
+    const prefix   = el.dataset.prefix || '';
     const duration = 1800;
-    const step = target / (duration / 16);
-    let current = 0;
+    const step     = target / (duration / 16);
+    let current    = 0;
 
     const timer = setInterval(() => {
       current += step;
@@ -96,14 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, { threshold: 0.5 });
-
     counterEls.forEach(el => obs.observe(el));
   }
 
-  /* ---- Contact form ---- */
+  /* ---- Contact form (Netlify Forms via fetch) ---- */
   const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
 
       const nom    = form.querySelector('[name="nom"]')?.value.trim();
@@ -116,15 +136,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      /* Disable inputs */
       form.querySelectorAll('input, select, textarea, button[type="submit"]')
           .forEach(el => el.disabled = true);
 
-      /* Show success */
+      try {
+        const data = new FormData(form);
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        });
+      } catch (_) { /* réseau : on affiche quand même le succès */ }
+
       const success = document.getElementById('form-success');
       if (success) {
+        success.style.display = 'flex';
         success.classList.remove('hidden');
-        success.classList.add('flex');
         lucide.createIcons();
       }
     });
@@ -141,5 +168,46 @@ document.addEventListener('DOMContentLoaded', () => {
     errEl.textContent = msg;
     setTimeout(() => { errEl.textContent = ''; }, 5000);
   }
+
+  /* ---- Hero carousel (2 cards at a time, 5 total) ---- */
+  const heroCards = Array.from(document.querySelectorAll('#hero-cards .hero-card'));
+  if (heroCards.length) {
+    const perPage = 2;
+    let current = 0;
+
+    function showCards(idx) {
+      heroCards.forEach((card, i) => {
+        const visible = i >= idx && i < idx + perPage;
+        card.style.display = visible ? '' : 'none';
+        card.setAttribute('aria-hidden', visible ? 'false' : 'true');
+      });
+      current = idx;
+    }
+
+    function advance(dir) {
+      let next = current + dir * perPage;
+      if (next < 0) next = Math.max(0, heroCards.length - perPage);
+      if (next + perPage > heroCards.length) next = 0;
+      showCards(next);
+    }
+
+    document.getElementById('hero-prev')?.addEventListener('click', () => advance(-1));
+    document.getElementById('hero-next')?.addEventListener('click', () => advance(1));
+
+    showCards(0);
+    setInterval(() => advance(1), 4000);
+  }
+
+  /* ---- FAQ accordion (contact page) ---- */
+  document.querySelectorAll('details').forEach(detail => {
+    const summary = detail.querySelector('summary');
+    if (!summary) return;
+    detail.addEventListener('toggle', () => {
+      const icon = summary.querySelector('[data-lucide]');
+      if (!icon) return;
+      icon.setAttribute('data-lucide', detail.open ? 'minus' : 'plus');
+      lucide.createIcons();
+    });
+  });
 
 });
